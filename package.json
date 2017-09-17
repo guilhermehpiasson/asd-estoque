@@ -1,8 +1,7 @@
 {
   "name": "asdEstoque",
   "version": "1.0.0",
-  "description": "Modulo responsavel pela exposicao de servicos relacionados ao estoque. Pode ser entendido como
-  uma relacao entre compras efetuadas e vendas efetuadas",
+  "description": "Modulo responsavel pela exposicao de servicos relacionados ao estoque. Pode ser entendido como uma relacao entre compras efetuadas e vendas efetuadas",
   "private": true,
   "scripts": {
     "start": "node asdEstoque.js"
