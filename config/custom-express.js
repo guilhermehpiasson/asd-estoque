@@ -6,6 +6,8 @@ var expressValidator = require('express-validator');
 module.exports = function(){
   var app = express();
 
+  app.set('port', process.env.PORT || 3002);
+
   app.use(bodyParser.urlencoded({extended: true}));
   app.use(bodyParser.json());
   app.use(bodyParser.text());
