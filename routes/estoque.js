@@ -1,6 +1,8 @@
+var logger = require('../servicos/logger.js');
+
 module.exports = function(app){
   app.get('/estoque', function(req, res){
-    console.log('Recebida requisicao de teste na porta 3002.')
+    logger.info('/estoque - Acessou');
     res.send('OK.');
   });
 
@@ -10,10 +12,10 @@ module.exports = function(app){
 
     EstoqueDao.listaProdutosParaVenda(function(erro, resultado){
       if(erro){
-        console.log('Erro ao consultar no banco:' + erro);
+        logger.error('Estoque/listaProdutosParaVenda - EstoqueDao.listaProdutosParaVenda: ' + erro);
         res.status(500).send(erro);
       } else {
-        console.log('produtos disponiveis em estoque listados');
+        logger.info('estoque/listaProdutosParaVenda - EstoqueDao.listaProdutosParaVenda - Acessou');
         res.status(201).json(resultado);
       }
     });
@@ -28,10 +30,10 @@ module.exports = function(app){
 
     EstoqueDao.listaProdutoEmEstoquePorId(produto.id, function(erro, resultado){
       if(erro){
-        console.log('Erro ao consultar no banco:' + erro);
+        logger.error('Estoque/listaProdutoEmEstoquePorId - EstoqueDao.listaProdutoEmEstoquePorId: ' + erro);
         res.status(500).send(erro);
       } else {
-        console.log('produto listado');
+        logger.info('estoque/listaProdutoEmEstoquePorId - EstoqueDao.listaProdutoEmEstoquePorId - Acessou');
         res.status(201).json(resultado);
       }
     });
@@ -43,9 +45,10 @@ module.exports = function(app){
 
     EstoqueDao.listaProdutosParaDescarte(function(erro, resultado){
       if(erro){
-        console.log('Erro ao consultar no banco:' + erro);
+        logger.error('Estoque/listaProdutoEmEstoquePorId - EstoqueDao.listaProdutoEmEstoquePorId: ' + erro);
         res.status(500).send(erro);
       } else {
+        logger.info('estoque/listaProdutosParaDescarte - EstoqueDao.listaProdutosParaDescarte - Acessou');
         res.status(201).json(resultado);
       }
     });

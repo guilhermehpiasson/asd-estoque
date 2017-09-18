@@ -1,0 +1,2 @@
+{"level":"info","message":"Express server listening on port 3002","timestamp":"2017-09-18T12:10:55.566Z"}
+{"level":"info","message":"estoque/listaProdutoEmEstoquePorId - EstoqueDao.listaProdutoEmEstoquePorId - Acessou","timestamp":"2017-09-18T12:10:59.133Z"}
