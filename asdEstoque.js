@@ -1,3 +1,10 @@
+/*
+ * Arquivo: asdEstoque.js
+ * Author: Guilherme Henrique Piasson
+ * Description: Arquivo principal e responsável por carregar as configuracões do express, configurações de log e iniciar a aplicação.
+ * Data: 19/09/2017
+ */
+
 var app = require('./config/custom-express')();
 var logger = require('./servicos/logger.js');
 

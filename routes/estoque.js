@@ -1,3 +1,10 @@
+/*
+ * Arquivo: estoque.js
+ * Author: Guilherme Henrique Piasson
+ * Description: Arquivo com a implmentação das rotas disponiveis desse modulo.
+ *              Atente para o fato de que a rota /estoque/listaProdutosParaDescarte é consumida por um Cliente REST do modulo AsdDescarte.
+ * Data: 19/09/2017
+ */
 var logger = require('../servicos/logger.js');
 
 module.exports = function(app){

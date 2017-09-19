@@ -1,3 +1,9 @@
+/*
+ * Arquivo: EstoqueDao.js
+ * Author: Guilherme Henrique Piasson
+ * Description: Arquivo com a implementação de queries de manipulacao do datasource.
+ * Data: 19/09/2017
+ */
 function EstoqueDao(connection) {
     this._connection = connection;
 }
